@@ -97,3 +97,55 @@ nav a:hover::before {
 .gallery img:hover {
     transform: scale(1.03);
 }
+/* SHOP HERO */
+.shop-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.shop-hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.shop-hero p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* PRODUCTS GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px 60px 80px;
+}
+
+/* PRODUCT CARD */
+.product {
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+.product button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #b3d991;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: 'Arima', cursive;
+    transition: 0.3s;
+}
+
+.product button:hover {
+    background: #9ccc7a;
+}
