@@ -4,35 +4,52 @@
 <meta charset="UTF-8">
 <title>Illusztrációk</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>K.K.K.KAMILLA PORTFOLIO</h1>
+    <a href="index.html" class="logo">K.K.K.KAMILLA PORTFOLIO</a>
 
-<nav>
-    <a href="illusztraciok.html" class="active">illusztrációk</a>
-    <a href="sketchbook.html">sketchbook</a>
-    <a href="webshop.html">webshop</a>
-    <a href="rolam.html">rólam</a>
-</nav>
+    <nav>
+        <a href="illusztraciok.html" class="active">illusztrációk</a>
+        <a href="sketchbook.html">sketchbook</a>
+        <a href="webshop.html">webshop</a>
+        <a href="rolam.html">rólam</a>
+    </nav>
 </header>
 
-<main>
+<main class="main-grid">
 
-<section class="gallery">
-    <img src="https://picsum.photos/500?11">
-    <img src="https://picsum.photos/500?12">
-    <img src="https://picsum.photos/500?13">
-    <img src="https://picsum.photos/500?14">
-    <img src="https://picsum.photos/500?15">
-    <img src="https://picsum.photos/500?16">
-</section>
+    <img src="https://picsum.photos/600?1" onclick="openImg(this.src)">
+    <img src="https://picsum.photos/600?2" onclick="openImg(this.src)">
+    <img src="https://picsum.photos/600?3" onclick="openImg(this.src)">
+    <img src="https://picsum.photos/600?4" onclick="openImg(this.src)">
+
+    <img src="https://picsum.photos/600?5" onclick="openImg(this.src)">
+    <img src="https://picsum.photos/600?6" onclick="openImg(this.src)">
+    <img src="https://picsum.photos/600?7" onclick="openImg(this.src)">
+    <img src="https://picsum.photos/600?8" onclick="openImg(this.src)">
 
 </main>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeImg()">
+    <img id="lightbox-img">
+    <div class="close-btn">X</div>
+</div>
+
+<script>
+function openImg(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+
+function closeImg() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
 
 </body>
 </html>
