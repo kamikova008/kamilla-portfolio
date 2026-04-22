@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>Illusztrációk</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>K.K.K.KAMILLA PORTFOLIO</h1>
+
+    <nav>
+        <a href="index.html">home</a>
+        <a href="sketchbook.html">sketchbook</a>
+        <a href="webshop.html">webshop</a>
+        <a href="rolam.html">rólam</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="gallery">
+    <img src="https://picsum.photos/500?11">
+    <img src="https://picsum.photos/500?12">
+    <img src="https://picsum.photos/500?13">
+    <img src="https://picsum.photos/500?14">
+    <img src="https://picsum.photos/500?15">
+    <img src="https://picsum.photos/500?16">
+</section>
+
+</main>
+
+</body>
+</html>
