@@ -2,37 +2,78 @@
 <html lang="hu">
 <head>
 <meta charset="UTF-8">
-<title>Illusztrációk</title>
+<title>Sketchbook</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>K.K.K.KAMILLA PORTFOLIO</h1>
+    <a href="index.html" class="logo">K.K.K.KAMILLA PORTFOLIO</a>
 
-<nav>
-    <a href="illusztraciok.html">illusztrációk</a>
-    <a href="sketchbook.html" class="active">sketchbook</a>
-    <a href="webshop.html">webshop</a>
-    <a href="rolam.html">rólam</a>
-</nav>
+    <nav>
+        <a href="illusztraciok.html">illusztrációk</a>
+        <a href="sketchbook.html" class="active">sketchbook</a>
+        <a href="webshop.html">webshop</a>
+        <a href="rolam.html">rólam</a>
+    </nav>
 </header>
 
-<main>
+<main class="book-wrapper">
 
-<section class="gallery">
-    <img src="https://picsum.photos/500?11">
-    <img src="https://picsum.photos/500?12">
-    <img src="https://picsum.photos/500?13">
-    <img src="https://picsum.photos/500?14">
-    <img src="https://picsum.photos/500?15">
-    <img src="https://picsum.photos/500?16">
-</section>
+    <!-- bal oldal -->
+    <div class="page" id="leftPage">
+        <img src="https://picsum.photos/600/800?1">
+    </div>
+
+    <!-- jobb oldal -->
+    <div class="page" id="rightPage">
+        <img src="https://picsum.photos/600/800?2">
+    </div>
 
 </main>
+
+<!-- NAV GOMBOK -->
+<div class="book-nav">
+    <button onclick="prevPage()">← előző</button>
+    <button onclick="nextPage()">következő →</button>
+</div>
+
+<script>
+const pages = [
+    ["https://picsum.photos/600/800?1", "https://picsum.photos/600/800?2"],
+    ["https://picsum.photos/600/800?3", "https://picsum.photos/600/800?4"],
+    ["https://picsum.photos/600/800?5", "https://picsum.photos/600/800?6"],
+    ["https://picsum.photos/600/800?7", "https://picsum.photos/600/800?8"]
+];
+
+let index = 0;
+
+function render() {
+    document.getElementById("leftPage").innerHTML =
+        `<img src="${pages[index][0]}">`;
+
+    document.getElementById("rightPage").innerHTML =
+        `<img src="${pages[index][1]}">`;
+}
+
+function nextPage() {
+    if (index < pages.length - 1) {
+        index++;
+        render();
+    }
+}
+
+function prevPage() {
+    if (index > 0) {
+        index--;
+        render();
+    }
+}
+
+render();
+</script>
 
 </body>
 </html>
