@@ -22,22 +22,22 @@
 
 <main class="main-grid">
 
-    <img src="https://picsum.photos/600?1" onclick="openImg(this.src)">
-    <img src="https://picsum.photos/600?2" onclick="openImg(this.src)">
-    <img src="https://picsum.photos/600?3" onclick="openImg(this.src)">
-    <img src="https://picsum.photos/600?4" onclick="openImg(this.src)">
+    <img src="https://picsum.photos/600?1" data-full="https://picsum.photos/1200?1" onclick="openImg(this.dataset.full)">
+    <img src="https://picsum.photos/600?2" data-full="https://picsum.photos/1200?2" onclick="openImg(this.dataset.full)">
+    <img src="https://picsum.photos/600?3" data-full="https://picsum.photos/1200?3" onclick="openImg(this.dataset.full)">
+    <img src="https://picsum.photos/600?4" data-full="https://picsum.photos/1200?4" onclick="openImg(this.dataset.full)">
 
-    <img src="https://picsum.photos/600?5" onclick="openImg(this.src)">
-    <img src="https://picsum.photos/600?6" onclick="openImg(this.src)">
-    <img src="https://picsum.photos/600?7" onclick="openImg(this.src)">
-    <img src="https://picsum.photos/600?8" onclick="openImg(this.src)">
+    <img src="https://picsum.photos/600?5" data-full="https://picsum.photos/1200?5" onclick="openImg(this.dataset.full)">
+    <img src="https://picsum.photos/600?6" data-full="https://picsum.photos/1200?6" onclick="openImg(this.dataset.full)">
+    <img src="https://picsum.photos/600?7" data-full="https://picsum.photos/1200?7" onclick="openImg(this.dataset.full)">
+    <img src="https://picsum.photos/600?8" data-full="https://picsum.photos/1200?8" onclick="openImg(this.dataset.full)">
 
 </main>
 
 <!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeImg()">
+    <div class="close-btn" onclick="closeImg(event)">X</div>
     <img id="lightbox-img">
-    <div class="close-btn">X</div>
 </div>
 
 <script>
@@ -46,7 +46,8 @@ function openImg(src) {
     document.getElementById("lightbox-img").src = src;
 }
 
-function closeImg() {
+function closeImg(event) {
+    if (event) event.stopPropagation();
     document.getElementById("lightbox").style.display = "none";
 }
 </script>
